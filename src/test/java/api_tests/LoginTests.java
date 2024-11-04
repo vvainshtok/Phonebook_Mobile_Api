@@ -8,8 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import static helper.RandomUtils.generateString;
-
 public class LoginTests extends AuthenticationController {
 
     SoftAssert softAssert = new SoftAssert();
