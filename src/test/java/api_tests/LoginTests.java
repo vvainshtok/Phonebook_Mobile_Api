@@ -2,11 +2,14 @@ package api_tests;
 
 import config.AuthenticationController;
 import dto.ErrorMessageDto;
+import dto.TokenDto;
 import dto.UserDto;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import static helper.PropertiesReader.*;
 
 public class LoginTests extends AuthenticationController {
 
@@ -15,8 +18,8 @@ public class LoginTests extends AuthenticationController {
     @Test
     public void loginPositive() {
         UserDto user = UserDto.builder()
-                .username("vv17@gmail.com")
-                .password("QWErty123!")
+                .username(getProperty("data.properties","email"))
+                .password(getProperty("data.properties","password"))
                 .build();
         Assert.assertEquals(requestRegLogin(user, LOGIN_PATH).getStatusCode(), 200);
     }
@@ -24,7 +27,7 @@ public class LoginTests extends AuthenticationController {
     @Test
     public void loginNegative_wrongEmailOrPassword401() {
         UserDto user = UserDto.builder()
-                .username("vv17@gmail.com")
+                .username(getProperty("data.properties","email"))
                 .password("wrong_password")
                 .build();
         Response response = requestRegLogin(user, LOGIN_PATH);
