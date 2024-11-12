@@ -1,6 +1,5 @@
 package screens;
 
-import config.AppiumConfig;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,13 +10,29 @@ public class ContactsScreen extends BaseScreen {
         super(driver);
     }
 
-    @FindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.TextView\n")
-    AndroidElement txtContactList;
+    @FindBy(xpath="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.TextView")
+    AndroidElement headerContactsScreen;
 
-    public boolean validatePage() {
-        return(textInElementPresent(txtContactList, "Contact list", 5));
+    @FindBy(id = "com.sheygam.contactapp:id/add_contact_btn")
+    AndroidElement btnAddNewContact;
+
+    @FindBy(xpath = "/hierarchy/android.widget.Toast")
+    AndroidElement popUpMessage;
+
+
+    public boolean validateHeader() {
+        return(textInElementPresent(headerContactsScreen, "Contact list", 5));
 
     }
 
+
+        public void clickBtnAddNewContact () {
+           // btnAddNewContact.click();
+            clickWait(btnAddNewContact, 5);
+    }
+
+    public boolean validatePopUpMessage() {
+        return textInElementPresent(popUpMessage, "Contact was added", 5);
+    }
 
 }
