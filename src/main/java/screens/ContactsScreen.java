@@ -19,20 +19,26 @@ public class ContactsScreen extends BaseScreen {
     @FindBy(xpath = "/hierarchy/android.widget.Toast")
     AndroidElement popUpMessage;
 
+    @FindBy(xpath = "//android.widget.ImageView[@content-desc='More options']")
+    AndroidElement btnMenu;
+
 
     public boolean validateHeader() {
         return(textInElementPresent(headerContactsScreen, "Contact list", 5));
 
     }
 
-
-        public void clickBtnAddNewContact () {
+    public void clickBtnAddNewContact () {
            // btnAddNewContact.click();
             clickWait(btnAddNewContact, 5);
     }
 
     public boolean validatePopUpMessage() {
         return textInElementPresent(popUpMessage, "Contact was added", 5);
+    }
+
+    public void clickBtnMenu() {
+        clickWait(btnMenu, 3);
     }
 
 }
