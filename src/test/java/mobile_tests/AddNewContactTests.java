@@ -1,6 +1,7 @@
 package mobile_tests;
 
 import config.AppiumConfig;
+import data_provider.ContactDP;
 import dto.ContactDtoLombok;
 import dto.ContactsDto;
 import dto.ErrorMessageDto;
@@ -12,17 +13,18 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import screens.*;
 
+import java.util.Arrays;
+
 import static helper.PropertiesReader.getProperty;
 import static helper.RandomUtils.*;
 
 public class AddNewContactTests extends AppiumConfig {
 
     UserDto user = UserDto.builder()
-            .username(getProperty("data.properties","email"))
-            .password(getProperty("data.properties","password"))
+            .username(getProperty("data.properties", "email"))
+            .password(getProperty("data.properties", "password"))
             .build();
     AddNewContactScreen addNewContactScreen;
-
 
 
     @BeforeMethod
@@ -47,7 +49,7 @@ public class AddNewContactTests extends AppiumConfig {
                 .build();
         addNewContactScreen.typeContactForm(contact);
         addNewContactScreen.clickBtnCreateContact();
-        Assert.assertTrue(new ContactsScreen(driver).validatePopUpMessage());
+        Assert.assertTrue(new ContactsScreen(driver).validatePopUpMessage("Contact was added"));
     }
 
     @Test
@@ -149,6 +151,46 @@ public class AddNewContactTests extends AppiumConfig {
                 break;
             }
         }
+        // int numberContact = Arrays.asList(contactsDto.getContacts()).indexOf(contact);
         Assert.assertFalse(flag);
+    }
+
+    @Test(dataProvider = "addNewContactDPFile", dataProviderClass = ContactDP.class)
+    public void addNewContactNegative_emptyField(ContactDtoLombok contact) {
+        addNewContactScreen.typeContactForm(contact);
+        addNewContactScreen.clickBtnCreateContact();
+        Assert.assertTrue(
+                new ErrorScreen(driver)
+                        .validateErrorMessage("must not be blank", 3)
+                        || new ErrorScreen(driver)
+                        .validateErrorMessage("well-formed email address", 3)
+                        || new ErrorScreen(driver)
+                        .validateErrorMessage("phone number must contain", 3)
+        );
+    }
+
+    @Test
+    public void addNewContactNegative_duplicateContactA() {
+        HelperApiMobile helperApiMobile = new HelperApiMobile();
+        helperApiMobile.login(user.getUsername(), user.getPassword());
+        Response responseGet = helperApiMobile.getUserContactsResponse();
+        if(responseGet.getStatusCode() == 200) {
+            ContactsDto contactsDto = responseGet.as(ContactsDto.class);
+            ContactDtoLombok contactApi = contactsDto.getContacts()[0];
+            ContactDtoLombok contact = ContactDtoLombok.builder()
+                    .name(contactApi.getName())
+                    .lastName(contactApi.getLastName())
+                    .email(contactApi.getEmail())
+                    .phone(contactApi.getPhone())
+                    .address(contactApi.getAddress())
+                    .description(contactApi.getDescription())
+                    .build();
+            addNewContactScreen.typeContactForm(contact);
+            addNewContactScreen.clickBtnCreateContact();
+            //bug - будет false
+            Assert.assertTrue(new ErrorScreen(driver)
+                            .validateErrorMessage("duplicate contact", 3));
+
+        }
     }
 }

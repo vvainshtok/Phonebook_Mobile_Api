@@ -38,4 +38,13 @@ public class HelperApiMobile implements BaseApi {
                 .get(BASE_URL + GET_ALL_CONTACTS_PATH)
                 .thenReturn();
     }
+
+    public Response requestRegistration(UserDto user) {
+        return given()
+                .body(user)
+                .contentType(ContentType.JSON)
+                .when()
+                .post(BASE_URL + REGISTRATION_PATH)
+                .thenReturn();
+    }
 }
