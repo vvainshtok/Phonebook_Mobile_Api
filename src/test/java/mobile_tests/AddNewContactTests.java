@@ -11,20 +11,25 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import screens.*;
 
 import java.util.Arrays;
+import java.util.List;
 
 import static helper.PropertiesReader.getProperty;
 import static helper.RandomUtils.*;
 
 public class AddNewContactTests extends AppiumConfig {
 
+    SoftAssert softAssert = new SoftAssert();
+
     UserDto user = UserDto.builder()
             .username(getProperty("data.properties", "email"))
             .password(getProperty("data.properties", "password"))
             .build();
     AddNewContactScreen addNewContactScreen;
+    ContactsScreen contactsScreen;
 
 
     @BeforeMethod
@@ -33,7 +38,8 @@ public class AddNewContactTests extends AppiumConfig {
         AuthenticationScreen authenticationScreen = new AuthenticationScreen(driver);
         authenticationScreen.typeAuthenticationForm(user);
         authenticationScreen.clickBtnLogin();
-        new ContactsScreen(driver).clickBtnAddNewContact();
+        contactsScreen = new ContactsScreen(driver);
+        contactsScreen.clickBtnAddNewContact();
         addNewContactScreen = new AddNewContactScreen(driver);
     }
 
@@ -69,15 +75,12 @@ public class AddNewContactTests extends AppiumConfig {
         helperApiMobile.login(user.getUsername(), user.getPassword());
         Response responseGet = helperApiMobile.getUserContactsResponse();
         ContactsDto contactsDto = responseGet.as(ContactsDto.class);
-        boolean flag = false;
-        for (ContactDtoLombok c : contactsDto.getContacts()) {
-            if (c.equals(contact)) {
-                flag = true;
-                break;
-            }
-        }
-        Assert.assertTrue(flag);
+
+        List<ContactDtoLombok> contactList = Arrays.asList(contactsDto.getContacts());
+        Assert.assertTrue(contactList.contains(contact));
     }
+
+
 
     @Test
     public void addNewContactNegative_emptyName() {
@@ -192,5 +195,22 @@ public class AddNewContactTests extends AppiumConfig {
                             .validateErrorMessage("duplicate contact", 3));
 
         }
+    }
+
+    @Test
+    public void addNewContactPositive_validateUIListContact() {
+        ContactDtoLombok contact = ContactDtoLombok.builder()
+                .name(generateString(10))
+                .lastName(generateString(10))
+                .email(generateEmail(12))
+                .phone(generatePhone(10))
+                .address(generateString(5) + " app." + generatePhone(2))
+                .description(generateString(15))
+                .build();
+        addNewContactScreen.typeContactForm(contact);
+        addNewContactScreen.clickBtnCreateContact();
+        softAssert.assertTrue(new ContactsScreen(driver).validatePopUpMessage("Contact was added"));
+        softAssert.assertTrue(contactsScreen.validateUIListContact(contact));
+        softAssert.assertAll();
     }
 }

@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c82c4bc-88f5-4802-a2e7-66abbda45c45" name="Changes" comment="Registration negative test (duplicate user) and AddContact negative tests added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/dp_data/list_contacts.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/data_provider/ContactDP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/DeleteContactTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" afterDir="false" />
+    <list default="true" id="2c82c4bc-88f5-4802-a2e7-66abbda45c45" name="Changes" comment="Delete (validation without api) test and EditContact positive test added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/RetryAnalyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/LogoutTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/helper/HelperApiMobile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/helper/HelperApiMobile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/screens/ContactsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/ContactsScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/SplashScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/SplashScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dp_data/list_contacts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dp_data/list_contacts.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/RegistrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/SplashTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/SplashTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,9 +83,14 @@
     "Gradle.AddNewContactTests.addNewContactNegative_wrongPhone.executor": "Run",
     "Gradle.AddNewContactTests.addNewContactPositive.executor": "Run",
     "Gradle.AddNewContactTests.addNewContactPositive_validateContactApi.executor": "Run",
+    "Gradle.AddNewContactTests.addNewContactPositive_validateUIListContact.executor": "Run",
     "Gradle.DeleteContactTests.deleteContactPositiveTest.executor": "Run",
     "Gradle.DeleteContactTests.deleteContactPositiveTest_validateWithoutApi.executor": "Run",
     "Gradle.DeleteContactTests.executor": "Run",
+    "Gradle.EditContactTests.addNewContactNegative_emptyField.executor": "Run",
+    "Gradle.EditContactTests.addNewContactNegative_emptyOrWrongField.executor": "Run",
+    "Gradle.EditContactTests.editContactNegativeTest_wrongEmail.executor": "Run",
+    "Gradle.EditContactTests.editContactNegativeTest_wrongPhone.executor": "Run",
     "Gradle.EditContactTests.editContactPositiveTest.executor": "Run",
     "Gradle.GetUserContactsTests.executor": "Run",
     "Gradle.LoginTests (1).executor": "Run",
@@ -98,6 +98,7 @@
     "Gradle.LoginTests.loginNegativeTest_unregEmail.executor": "Run",
     "Gradle.LoginTests.loginNegativeTest_wrongPassword.executor": "Run",
     "Gradle.LoginTests.loginPositiveTest.executor": "Run",
+    "Gradle.LogoutTests.logout.executor": "Run",
     "Gradle.Phonebook_Mobile_Api [dependencies].executor": "Run",
     "Gradle.RegistrationTests.executor": "Run",
     "Gradle.RegistrationTests.registrationNegativeTest_createUserApi.executor": "Run",
@@ -123,8 +124,8 @@
       <recent name="C:\Data\Tel-Ran\QA-44\Phonebook_Mobile_Api\src\main\resources\dp_data" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.EditContactTests.editContactPositiveTest">
-    <configuration name="AddNewContactTests.addNewContactNegative_duplicateContactA" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.EditContactTests.editContactNegativeTest_wrongPhone">
+    <configuration name="EditContactTests.addNewContactNegative_emptyField" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -137,7 +138,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.AddNewContactTests.addNewContactNegative_duplicateContactA&quot;" />
+            <option value="&quot;mobile_tests.EditContactTests.addNewContactNegative_emptyField&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -148,7 +149,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AddNewContactTests.addNewContactNegative_emptyField" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EditContactTests.addNewContactNegative_emptyOrWrongField" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -161,7 +162,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.AddNewContactTests.addNewContactNegative_emptyField&quot;" />
+            <option value="&quot;mobile_tests.EditContactTests.addNewContactNegative_emptyOrWrongField&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -172,7 +173,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="DeleteContactTests.deleteContactPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EditContactTests.editContactNegativeTest_wrongEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -185,7 +186,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.DeleteContactTests.deleteContactPositiveTest&quot;" />
+            <option value="&quot;mobile_tests.EditContactTests.editContactNegativeTest_wrongEmail&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -196,7 +197,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="DeleteContactTests.deleteContactPositiveTest_validateWithoutApi" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EditContactTests.editContactNegativeTest_wrongPhone" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -209,7 +210,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.DeleteContactTests.deleteContactPositiveTest_validateWithoutApi&quot;" />
+            <option value="&quot;mobile_tests.EditContactTests.editContactNegativeTest_wrongPhone&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -220,7 +221,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="EditContactTests.editContactPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LogoutTests.logout" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -233,7 +234,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.EditContactTests.editContactPositiveTest&quot;" />
+            <option value="&quot;mobile_tests.LogoutTests.logout&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -246,11 +247,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.EditContactTests.editContactPositiveTest" />
-        <item itemvalue="Gradle.DeleteContactTests.deleteContactPositiveTest_validateWithoutApi" />
-        <item itemvalue="Gradle.DeleteContactTests.deleteContactPositiveTest" />
-        <item itemvalue="Gradle.AddNewContactTests.addNewContactNegative_duplicateContactA" />
-        <item itemvalue="Gradle.AddNewContactTests.addNewContactNegative_emptyField" />
+        <item itemvalue="Gradle.EditContactTests.editContactNegativeTest_wrongPhone" />
+        <item itemvalue="Gradle.EditContactTests.addNewContactNegative_emptyOrWrongField" />
+        <item itemvalue="Gradle.EditContactTests.addNewContactNegative_emptyField" />
+        <item itemvalue="Gradle.EditContactTests.editContactNegativeTest_wrongEmail" />
+        <item itemvalue="Gradle.LogoutTests.logout" />
       </list>
     </recent_temporary>
   </component>
@@ -279,13 +280,22 @@
       <option name="project" value="LOCAL" />
       <updated>1731573965124</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Delete (validation without api) test and EditContact positive test added">
+      <option name="closed" value="true" />
+      <created>1731845558387</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731845558387</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Login and AddContact mobile Tests added" />
     <MESSAGE value="Registration negative test (duplicate user) and AddContact negative tests added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Registration negative test (duplicate user) and AddContact negative tests added" />
+    <MESSAGE value="Delete (validation without api) test and EditContact positive test added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete (validation without api) test and EditContact positive test added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -299,11 +309,6 @@
           <line>13</line>
           <properties field="inputName" class="screens.AddNewContactScreen" />
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java</url>
-          <line>164</line>
-          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

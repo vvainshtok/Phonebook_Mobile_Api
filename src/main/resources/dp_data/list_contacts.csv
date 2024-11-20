@@ -1,5 +1,6 @@
 ,lastName1,1234567890,email1@mail.com,address1,desc
 name2,,1234567890,email2@mail.com,address2,desc
 name3,lastName3,,email3@mail.com,address3,desc
-name4,lastName4,1234567890,,address4,desc
-name5,lastName5,1234567890,email5@mail.com,,desc
+name4,lastName4,123,email4@mail.com,address4,desc
+name5,lastName5,+7972456324654,email5@mail.com,address4,desc
+name6,lastName6,1234567890,wrongemail,address6,desc

@@ -1,12 +1,15 @@
 package screens;
 
 import dto.ContactDtoLombok;
-import dto.ContactsDto;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.touch.offset.PointOption;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactsScreen extends BaseScreen {
 
@@ -42,6 +45,12 @@ public class ContactsScreen extends BaseScreen {
 
     @FindBy(id = "android:id/button1")
     AndroidElement popUpBtnYes;
+
+   @FindBy(xpath = "//*[@text='Logout']")
+    AndroidElement btnLogout;
+    @FindBy(xpath = "//*[@text='Date picker']")
+    AndroidElement btnDatePicker;
+
 
     public boolean validateHeader() {
         return(textInElementPresent(headerContactsScreen, "Contact list", 5));
@@ -91,7 +100,7 @@ public class ContactsScreen extends BaseScreen {
         return names;
     }
 
-    public void selectContactToEdit() {
+    public void goToEditScreen() {
         pause(2);
         int xLeftUpCorner = firstElementContactList.getLocation().getX();
         int yLeftUpCorner = firstElementContactList.getLocation().getY();
@@ -102,5 +111,51 @@ public class ContactsScreen extends BaseScreen {
                 .moveTo(PointOption.point(xLeftUpCorner + widthElement/6, yLeftUpCorner + heightElement/2))
                 .release()
                 .perform();
+    }
+
+    public boolean validateUIListContact(ContactDtoLombok contact) {
+        String nameFamily = contact.getName() + " " + contact.getLastName();
+        List<AndroidElement> listContactsOnScreen = new ArrayList<>();
+        System.out.println("List size --> " + listContactsOnScreen.size());
+        boolean flagEqualsNameFamily = false;
+        boolean flagEndOfList = false;
+        listContactsOnScreen = driver.findElements
+                (By.xpath("//*[@resource-id='com.sheygam.contactapp:id/rowName']"));
+
+        while(!flagEndOfList) {
+            AndroidElement lastElementInListPrev = listContactsOnScreen.get(listContactsOnScreen.size()-1);
+            //lastElementInList.getLocation();
+            for (AndroidElement e : listContactsOnScreen) {
+                System.out.println(e.getText());
+                if (e.getText().equals(nameFamily)) {
+                    flagEqualsNameFamily = true;
+                    flagEndOfList = true;
+                    break;
+                }
+            }
+            scrollUp();
+            listContactsOnScreen = driver.findElements
+                    (By.xpath("//*[@resource-id='com.sheygam.contactapp:id/rowName']"));
+            if (lastElementInListPrev.getLocation()
+                    .equals( listContactsOnScreen.get(listContactsOnScreen.size()-1).getLocation())) {
+                flagEndOfList = true;
+            }
+        }
+        return flagEqualsNameFamily;
+    }
+
+    private void scrollUp() {
+        int height = driver.manage().window().getSize().getHeight();
+        int width = driver.manage().window().getSize().getWidth();
+        TouchAction<?> touchAction = new TouchAction<>(driver);
+        touchAction.longPress(PointOption.point(10, height*7/8))
+                .moveTo(PointOption.point(10, height/8))
+                .release()
+                .perform();
+        }
+
+    public void logout() {
+        clickWait(btnMenu, 3);
+        clickWait(btnLogout, 3);
     }
 }

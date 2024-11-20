@@ -26,7 +26,7 @@ public class EditContactScreen extends BaseScreen {
     @FindBy(id = "com.sheygam.contactapp:id/updateBtn")
     AndroidElement popUpBtnUpdate;
 
-        public void typeContactForm(ContactDtoLombok contact) {
+    public void typeEditContactForm(ContactDtoLombok contact) {
         inputName.sendKeys(contact.getName());
         inputLastName.sendKeys(contact.getLastName());
         inputEmail.sendKeys(contact.getEmail());
