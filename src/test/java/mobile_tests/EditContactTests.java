@@ -13,6 +13,9 @@ import org.testng.annotations.Test;
 import screens.*;
 import utils.RetryAnalyzer;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static helper.PropertiesReader.getProperty;
 import static helper.RandomUtils.*;
 import static helper.RandomUtils.generateString;
@@ -81,24 +84,17 @@ public class EditContactTests extends AppiumConfig {
                 .address(generateString(5) + " app." + generatePhone(2))
                 .description(generateString(15))
                 .build();
-        HelperApiMobile helperApiMobile = new HelperApiMobile();
-        helperApiMobile.login(user.getUsername(), user.getPassword());
-        Response responseGet = helperApiMobile.getUserContactsResponse();
-        ContactsDto contactsDto = responseGet.as(ContactsDto.class);
-
         contactScreen.goToEditScreen();
         editContactScreen = new EditContactScreen(driver);
         editContactScreen.typeEditContactForm(contact);
         editContactScreen.clickBtnUpdate();
 
-        boolean flag = false;
-        for (ContactDtoLombok c : contactsDto.getContacts()) {
-            if (c.equals(contact)) {
-                flag = true;
-                break;
-            }
-        }
-        Assert.assertTrue(flag);
+        HelperApiMobile helperApiMobile = new HelperApiMobile();
+        helperApiMobile.login(user.getUsername(), user.getPassword());
+        Response responseGet = helperApiMobile.getUserContactsResponse();
+        ContactsDto contactsDto = responseGet.as(ContactsDto.class);
+        List<ContactDtoLombok> contactList = Arrays.asList(contactsDto.getContacts());
+        Assert.assertTrue(contactList.contains(contact));
     }
 
     // ===================================================================================

@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c82c4bc-88f5-4802-a2e7-66abbda45c45" name="Changes" comment="Delete (validation without api) test and EditContact positive test added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/utils/RetryAnalyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/LogoutTests.java" afterDir="false" />
+    <list default="true" id="2c82c4bc-88f5-4802-a2e7-66abbda45c45" name="Changes" comment="EditContact negative tests added, RetryAnalyzer added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/ContactsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/ContactsScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/EditContactScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dp_data/list_contacts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dp_data/list_contacts.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +85,8 @@
     "Gradle.EditContactTests.editContactNegativeTest_wrongEmail.executor": "Run",
     "Gradle.EditContactTests.editContactNegativeTest_wrongPhone.executor": "Run",
     "Gradle.EditContactTests.editContactPositiveTest.executor": "Run",
+    "Gradle.EditContactTests.editContactPositiveTest_validateApi.executor": "Run",
+    "Gradle.EditContactTests.executor": "Run",
     "Gradle.GetUserContactsTests.executor": "Run",
     "Gradle.LoginTests (1).executor": "Run",
     "Gradle.LoginTests.executor": "Run",
@@ -124,7 +119,31 @@
       <recent name="C:\Data\Tel-Ran\QA-44\Phonebook_Mobile_Api\src\main\resources\dp_data" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.EditContactTests.editContactNegativeTest_wrongPhone">
+  <component name="RunManager" selected="Gradle.EditContactTests.editContactPositiveTest_validateApi">
+    <configuration name="EditContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;mobile_tests.EditContactTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="EditContactTests.addNewContactNegative_emptyField" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -173,30 +192,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="EditContactTests.editContactNegativeTest_wrongEmail" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;mobile_tests.EditContactTests.editContactNegativeTest_wrongEmail&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="EditContactTests.editContactNegativeTest_wrongPhone" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -221,7 +216,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LogoutTests.logout" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EditContactTests.editContactPositiveTest_validateApi" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -234,7 +229,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.LogoutTests.logout&quot;" />
+            <option value="&quot;mobile_tests.EditContactTests.editContactPositiveTest_validateApi&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -247,11 +242,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.EditContactTests.editContactPositiveTest_validateApi" />
+        <item itemvalue="Gradle.EditContactTests" />
         <item itemvalue="Gradle.EditContactTests.editContactNegativeTest_wrongPhone" />
         <item itemvalue="Gradle.EditContactTests.addNewContactNegative_emptyOrWrongField" />
         <item itemvalue="Gradle.EditContactTests.addNewContactNegative_emptyField" />
-        <item itemvalue="Gradle.EditContactTests.editContactNegativeTest_wrongEmail" />
-        <item itemvalue="Gradle.LogoutTests.logout" />
       </list>
     </recent_temporary>
   </component>
@@ -288,14 +283,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731845558387</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="EditContact negative tests added, RetryAnalyzer added">
+      <option name="closed" value="true" />
+      <created>1732126257058</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732126257058</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Login and AddContact mobile Tests added" />
     <MESSAGE value="Registration negative test (duplicate user) and AddContact negative tests added" />
     <MESSAGE value="Delete (validation without api) test and EditContact positive test added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete (validation without api) test and EditContact positive test added" />
+    <MESSAGE value="EditContact negative tests added, RetryAnalyzer added" />
+    <option name="LAST_COMMIT_MESSAGE" value="EditContact negative tests added, RetryAnalyzer added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
