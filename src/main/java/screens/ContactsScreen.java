@@ -46,7 +46,7 @@ public class ContactsScreen extends BaseScreen {
     @FindBy(id = "android:id/button1")
     AndroidElement popUpBtnYes;
 
-   @FindBy(xpath = "//*[@text='Logout']")
+    @FindBy(xpath = "//*[@text='Logout']")
     AndroidElement btnLogout;
     @FindBy(xpath = "//*[@text='Date picker']")
     AndroidElement btnDatePicker;
@@ -157,5 +157,10 @@ public class ContactsScreen extends BaseScreen {
     public void logout() {
         clickWait(btnMenu, 3);
         clickWait(btnLogout, 3);
+    }
+
+    public void goToDatePicker() {
+       clickWait(btnMenu, 2);
+       clickWait(btnDatePicker, 2);
     }
 }
