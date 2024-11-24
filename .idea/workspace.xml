@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c82c4bc-88f5-4802-a2e7-66abbda45c45" name="Changes" comment="EditContact negative tests added, RetryAnalyzer added">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db_mysql/BaseSQL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/db_mysql/mybase.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/screens/DatePickerScreen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/DatePickerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/AuthenticationScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/AuthenticationScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/ContactsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/ContactsScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/LogoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/LogoutTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="2c82c4bc-88f5-4802-a2e7-66abbda45c45" name="Changes" comment="sql added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -300,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732128042377</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="sql added">
+      <option name="closed" value="true" />
+      <created>1732291045572</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732291045572</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -308,7 +305,8 @@
     <MESSAGE value="Registration negative test (duplicate user) and AddContact negative tests added" />
     <MESSAGE value="Delete (validation without api) test and EditContact positive test added" />
     <MESSAGE value="EditContact negative tests added, RetryAnalyzer added" />
-    <option name="LAST_COMMIT_MESSAGE" value="EditContact negative tests added, RetryAnalyzer added" />
+    <MESSAGE value="sql added" />
+    <option name="LAST_COMMIT_MESSAGE" value="sql added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
