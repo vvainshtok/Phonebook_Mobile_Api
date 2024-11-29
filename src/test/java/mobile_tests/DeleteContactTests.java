@@ -25,7 +25,7 @@ public class DeleteContactTests extends AppiumConfig {
 
     ContactsScreen contactScreen;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void loginAndGoToAddNewContactScreen() {
         new SplashScreen(driver).goToAuthScreen(5);
         AuthenticationScreen authenticationScreen = new AuthenticationScreen(driver);
@@ -58,7 +58,7 @@ public class DeleteContactTests extends AppiumConfig {
         Assert.assertEquals(quantityContactsBeforeDelete - quantityContactsAfterDelete, 1);
     }
 
-    @Test
+    @Test(groups="smoke")
     public void deleteContactPositiveTest_validateWithoutApi() {
         String[] namesBefore, namesAfter;
         namesBefore = contactScreen.get5ElementsNames();

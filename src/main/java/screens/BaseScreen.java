@@ -30,7 +30,7 @@ public class BaseScreen {
             return new WebDriverWait(driver, time)
                     .until(ExpectedConditions.textToBePresentInElement(element, text));
         } catch (TimeoutException e) {
-            System.out.println("create exception");
+            System.out.println("Exception... element not found...");
             e.printStackTrace();
             return false;
         }

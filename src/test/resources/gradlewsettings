@@ -1,0 +1,4 @@
+.\gradlew clean smoke_tests
+.\gradlew clean -Ptype_dc=Pix2 smoke_tests
+.\gradlew clean -Ptype_dc=A35 smoke_tests
+.\gradlew clean -Ptype_dc=Pix2 api_mobile_tests

@@ -15,19 +15,38 @@ public class AppiumConfig {
     public int width = 0;
     public int height = 0;
 
+    static String type_dc;
 
-    @BeforeMethod
+    public AppiumConfig() {
+        type_dc = System.getProperty("type_dc", "Pix2");
+    }
+
+    @BeforeMethod(alwaysRun = true)
     public void setup(){
-        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-        desiredCapabilities.setCapability("platformName", "Android");
-        desiredCapabilities.setCapability("deviceName", "Pix2");
-        desiredCapabilities.setCapability("platformVersion", "8.0");
-        desiredCapabilities.setCapability("appPackage", "com.sheygam.contactapp");
-        desiredCapabilities.setCapability("appActivity", ".SplashActivity");
+        DesiredCapabilities desiredCapabilitiesPix2 = new DesiredCapabilities();
+        desiredCapabilitiesPix2.setCapability("platformName", "Android");
+        desiredCapabilitiesPix2.setCapability("deviceName", "Pix2");
+        desiredCapabilitiesPix2.setCapability("platformVersion", "8.0");
+        desiredCapabilitiesPix2.setCapability("appPackage", "com.sheygam.contactapp");
+        desiredCapabilitiesPix2.setCapability("appActivity", ".SplashActivity");
+        String urlPix2 = "http://localhost:4723/wd/hub";
 
-        desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
+        DesiredCapabilities desiredCapabilitiesA35 = new DesiredCapabilities();
+        desiredCapabilitiesA35.setCapability("platformName", "Android");
+        desiredCapabilitiesA35.setCapability("deviceName", "A35");
+        desiredCapabilitiesA35.setCapability("platformVersion", "13");
+        desiredCapabilitiesA35.setCapability("appPackage", "com.sheygam.contactapp");
+        desiredCapabilitiesA35.setCapability("appActivity", ".SplashActivity");
+        String urlA35 = "http://localhost:4723/wd/hub";
+
+        desiredCapabilitiesPix2.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
         try {
-            driver = new AppiumDriver<>(new URL("http://localhost:4723/wd/hub"), desiredCapabilities);
+            if (type_dc.equals("Pix2")) {
+                driver = new AppiumDriver<>(new URL(urlPix2), desiredCapabilitiesPix2);
+            }
+            else if(type_dc.equals("A35")) {
+                driver = new AppiumDriver<>(new URL(urlA35), desiredCapabilitiesA35);
+            }
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
@@ -37,7 +56,7 @@ public class AppiumConfig {
 
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         //driver.quit();
     }

@@ -19,13 +19,13 @@ public class LoginTests extends AppiumConfig {
 
     AuthenticationScreen authenticationScreen;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void openLoginForm() {
         new SplashScreen(driver).goToAuthScreen(5);
         authenticationScreen = new AuthenticationScreen(driver);
     }
 
-    @Test
+    @Test(groups="smoke")
     public void loginPositiveTest() {
         UserDto user = UserDto.builder()
                 .username(getProperty("data.properties","email"))

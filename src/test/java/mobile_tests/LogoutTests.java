@@ -19,7 +19,7 @@ public class LogoutTests extends AppiumConfig {
             .build();
     ContactsScreen contactsScreen;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void loginAndGoToAddNewContactScreen() {
         new SplashScreen(driver).goToAuthScreen(5);
         AuthenticationScreen authenticationScreen = new AuthenticationScreen(driver);
@@ -27,7 +27,7 @@ public class LogoutTests extends AppiumConfig {
         authenticationScreen.clickBtnLogin();
     }
 
-    @Test
+    @Test(groups="smoke")
     public void logout() {
         contactsScreen = new ContactsScreen(driver);
         contactsScreen.logout();

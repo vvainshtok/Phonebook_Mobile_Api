@@ -30,7 +30,7 @@ public class EditContactTests extends AppiumConfig {
     ContactsScreen contactScreen;
     EditContactScreen editContactScreen;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void loginAndGoToAddNewContactScreen() {
         new SplashScreen(driver).goToAuthScreen(5);
         AuthenticationScreen authenticationScreen = new AuthenticationScreen(driver);
@@ -39,7 +39,7 @@ public class EditContactTests extends AppiumConfig {
         contactScreen = new ContactsScreen(driver);
     }
 
-    @Test
+    @Test(groups="smoke")
     public void editContactPositiveTest() {
         ContactDtoLombok contact = ContactDtoLombok.builder()
                 .name("edit-" + generateString(10))

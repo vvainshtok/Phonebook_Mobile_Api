@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c82c4bc-88f5-4802-a2e7-66abbda45c45" name="Changes" comment="sql added" />
+    <list default="true" id="2c82c4bc-88f5-4802-a2e7-66abbda45c45" name="Changes" comment="date picker positive test added">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/gradlewsettings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/run_api_mobile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/run_smoke.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/config/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/BaseScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/BaseScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screens/DatePickerScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/DatePickerScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/DatePickerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/DatePickerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/DeleteContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/DeleteContactTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/LoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/LogoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/LogoutTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +40,12 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Phonebook_Mobile_Api" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -63,64 +85,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.AddContactTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AddNewContactTests.addNewContactNegative_duplicateContactA.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AddNewContactTests.addNewContactNegative_emptyField.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AddNewContactTests.addNewContactNegative_emptyLastName_validateContactApi.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AddNewContactTests.addNewContactNegative_emptyName.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AddNewContactTests.addNewContactNegative_wrongEmail.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AddNewContactTests.addNewContactNegative_wrongPhone.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AddNewContactTests.addNewContactPositive.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AddNewContactTests.addNewContactPositive_validateContactApi.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.AddNewContactTests.addNewContactPositive_validateUIListContact.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DatePickerTests.datePickerTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteContactTests.deleteContactPositiveTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteContactTests.deleteContactPositiveTest_validateWithoutApi.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.DeleteContactTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.EditContactTests.addNewContactNegative_emptyField.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.EditContactTests.addNewContactNegative_emptyOrWrongField.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.EditContactTests.editContactNegativeTest_wrongEmail.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.EditContactTests.editContactNegativeTest_wrongPhone.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.EditContactTests.editContactPositiveTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.EditContactTests.editContactPositiveTest_validateApi.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.EditContactTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.GetUserContactsTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginNegativeTest_unregEmail.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginNegativeTest_wrongPassword.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LoginTests.loginPositiveTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.LogoutTests.logout.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Phonebook_Mobile_Api [:db_mysql.BaseSQL.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Phonebook_Mobile_Api [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationNegativeTest_createUserApi.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationNegativeTest_duplicateUser.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationNegativeTest_wrongEmail.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationNegativeTest_wrongPassword.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.RegistrationTests.registrationPositiveTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SplashTests.validateSplashScreenTimeTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SplashTests.validateVersionTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.UpdateContactsTests.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Data/Tel-Ran/QA-44/Phonebook_Mobile_Api/src/main/resources/dp_data&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.AddContactTests.executor": "Run",
+    "Gradle.AddNewContactTests.addNewContactNegative_duplicateContactA.executor": "Run",
+    "Gradle.AddNewContactTests.addNewContactNegative_emptyField.executor": "Run",
+    "Gradle.AddNewContactTests.addNewContactNegative_emptyLastName_validateContactApi.executor": "Run",
+    "Gradle.AddNewContactTests.addNewContactNegative_emptyName.executor": "Run",
+    "Gradle.AddNewContactTests.addNewContactNegative_wrongEmail.executor": "Run",
+    "Gradle.AddNewContactTests.addNewContactNegative_wrongPhone.executor": "Run",
+    "Gradle.AddNewContactTests.addNewContactPositive.executor": "Run",
+    "Gradle.AddNewContactTests.addNewContactPositive_validateContactApi.executor": "Run",
+    "Gradle.AddNewContactTests.addNewContactPositive_validateUIListContact.executor": "Run",
+    "Gradle.DatePickerTests.datePickerPositiveTest.executor": "Run",
+    "Gradle.DatePickerTests.datePickerTest.executor": "Run",
+    "Gradle.DeleteContactTests.deleteContactPositiveTest.executor": "Run",
+    "Gradle.DeleteContactTests.deleteContactPositiveTest_validateWithoutApi.executor": "Run",
+    "Gradle.DeleteContactTests.executor": "Run",
+    "Gradle.EditContactTests.addNewContactNegative_emptyField.executor": "Run",
+    "Gradle.EditContactTests.addNewContactNegative_emptyOrWrongField.executor": "Run",
+    "Gradle.EditContactTests.editContactNegativeTest_wrongEmail.executor": "Run",
+    "Gradle.EditContactTests.editContactNegativeTest_wrongPhone.executor": "Run",
+    "Gradle.EditContactTests.editContactPositiveTest.executor": "Run",
+    "Gradle.EditContactTests.editContactPositiveTest_validateApi.executor": "Run",
+    "Gradle.EditContactTests.executor": "Run",
+    "Gradle.GetUserContactsTests.executor": "Run",
+    "Gradle.LoginTests (1).executor": "Run",
+    "Gradle.LoginTests.executor": "Run",
+    "Gradle.LoginTests.loginNegativeTest_unregEmail.executor": "Run",
+    "Gradle.LoginTests.loginNegativeTest_wrongPassword.executor": "Run",
+    "Gradle.LoginTests.loginPositiveTest.executor": "Run",
+    "Gradle.LogoutTests.logout.executor": "Run",
+    "Gradle.Phonebook_Mobile_Api [:db_mysql.BaseSQL.main()].executor": "Run",
+    "Gradle.Phonebook_Mobile_Api [dependencies].executor": "Run",
+    "Gradle.RegistrationTests.executor": "Run",
+    "Gradle.RegistrationTests.registrationNegativeTest_createUserApi.executor": "Run",
+    "Gradle.RegistrationTests.registrationNegativeTest_duplicateUser.executor": "Run",
+    "Gradle.RegistrationTests.registrationNegativeTest_wrongEmail.executor": "Run",
+    "Gradle.RegistrationTests.registrationNegativeTest_wrongPassword.executor": "Run",
+    "Gradle.RegistrationTests.registrationPositiveTest.executor": "Run",
+    "Gradle.SplashTests.validateSplashScreenTimeTest.executor": "Run",
+    "Gradle.SplashTests.validateVersionTest.executor": "Run",
+    "Gradle.UpdateContactsTests.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Data/Tel-Ran/QA-44/Phonebook_Mobile_Api/src/test/resources",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Data\Tel-Ran\QA-44\Phonebook_Mobile_Api\src\test\resources" />
       <recent name="C:\Data\Tel-Ran\QA-44\Phonebook_Mobile_Api\src\main\resources\dp_data" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BaseSQL">
+  <component name="RunManager" selected="Gradle.LoginTests.loginPositiveTest">
     <configuration name="BaseSQL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="db_mysql.BaseSQL" />
       <module name="Phonebook_Mobile_Api.main" />
@@ -133,6 +157,30 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="DatePickerTests.datePickerPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;mobile_tests.DatePickerTests.datePickerPositiveTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="DatePickerTests.datePickerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -158,7 +206,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="EditContactTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LoginTests.loginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -171,31 +219,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.EditContactTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="EditContactTests.editContactPositiveTest_validateApi" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;mobile_tests.EditContactTests.editContactPositiveTest_validateApi&quot;" />
+            <option value="&quot;mobile_tests.LoginTests.loginPositiveTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -232,11 +256,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BaseSQL" />
+        <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
+        <item itemvalue="Gradle.DatePickerTests.datePickerPositiveTest" />
         <item itemvalue="Gradle.DatePickerTests.datePickerTest" />
+        <item itemvalue="Application.BaseSQL" />
         <item itemvalue="Gradle.LogoutTests.logout" />
-        <item itemvalue="Gradle.EditContactTests.editContactPositiveTest_validateApi" />
-        <item itemvalue="Gradle.EditContactTests" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732291045572</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="date picker positive test added">
+      <option name="closed" value="true" />
+      <created>1732458056598</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732458056598</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -306,7 +338,8 @@
     <MESSAGE value="Delete (validation without api) test and EditContact positive test added" />
     <MESSAGE value="EditContact negative tests added, RetryAnalyzer added" />
     <MESSAGE value="sql added" />
-    <option name="LAST_COMMIT_MESSAGE" value="sql added" />
+    <MESSAGE value="date picker positive test added" />
+    <option name="LAST_COMMIT_MESSAGE" value="date picker positive test added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -49,7 +49,9 @@ public class DatePickerScreen extends BaseScreen {
         clickWait(btnOk, 3);
     }
 
+
     public int getMonthsDiff(String month1, String month2) {
+
         return (Month.valueOf(month1.toUpperCase()).getValue()
                 - Month.valueOf(month2.toUpperCase()).getValue());
     }

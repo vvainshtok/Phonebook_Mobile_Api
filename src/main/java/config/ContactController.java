@@ -22,7 +22,7 @@ public class ContactController implements BaseApi {
     protected TokenDto token;
     private RequestSpecification requestSpecWithToken;
 
-    @BeforeSuite
+    @BeforeSuite(alwaysRun = true)
     public void login() {
         UserDto user = UserDto.builder()
                 .username(getProperty("data.properties","email"))

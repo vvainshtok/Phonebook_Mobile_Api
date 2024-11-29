@@ -17,7 +17,7 @@ public class DatePickerTests extends AppiumConfig {
             .build();
     ContactsScreen contactsScreen;
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void loginAndGoToAddNewContactScreen() {
         new SplashScreen(driver).goToAuthScreen(5);
         AuthenticationScreen authenticationScreen = new AuthenticationScreen(driver);
@@ -27,7 +27,7 @@ public class DatePickerTests extends AppiumConfig {
         contactsScreen.goToDatePicker();
     }
 
-    @Test
+    @Test(groups="smoke")
     // This test will fail because of the application bug
     // (Wrong date is displayed after setting -- month is one less that should be,
     // so if month is January or date like 31/10, the application crushes)
