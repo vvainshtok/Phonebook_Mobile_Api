@@ -11,32 +11,37 @@ import java.io.*;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class UserDto implements Serializable {
+public class UserSer implements Serializable {
 
     @Serial
-    private static final long serialVersionUID = 6543456L;
+    private static final long serialVersionUID = 6543457L;
+
+    public static int anInt;
 
     private String username;
-    private String password;
+    transient private String password;
 
-    public static void serializableUserDto(UserDto userDto, String fileName) {
+    final String email = "name@mail.com";
+
+    public static void serializableUserSer(UserSer userSer, String fileName) {
         try {
             ObjectOutputStream outputStream =
                     new ObjectOutputStream(new FileOutputStream("src/main/resources/serializable_file/" +fileName));
-            outputStream.writeObject(userDto);
+            outputStream.writeObject(userSer);
             outputStream.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static UserDto deserializableUserDto(String fileName) {
+    public static UserSer deserializableUserSer(String fileName) {
         try (ObjectInputStream inputStream =
                      new ObjectInputStream(new FileInputStream ("src/main/resources/serializable_file/" +fileName))){
-            return (UserDto) inputStream.readObject();
+            return (UserSer) inputStream.readObject();
 
         } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
 }
+

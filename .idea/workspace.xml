@@ -4,23 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c82c4bc-88f5-4802-a2e7-66abbda45c45" name="Changes" comment="date picker positive test added">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/gradlewsettings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/run_api_mobile.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/run_smoke.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="2c82c4bc-88f5-4802-a2e7-66abbda45c45" name="Changes" comment="xml file added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/UserSer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/helper/PropertiesXML.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/serializable_tests/SerializableTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/AppiumConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/config/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/config/ContactController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/BaseScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/BaseScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/screens/DatePickerScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screens/DatePickerScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/AddNewContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/DatePickerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/DatePickerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/DeleteContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/DeleteContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/EditContactTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/LoginTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/mobile_tests/LogoutTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mobile_tests/LogoutTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/UserDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +106,7 @@
     "Gradle.LoginTests.loginPositiveTest.executor": "Run",
     "Gradle.LogoutTests.logout.executor": "Run",
     "Gradle.Phonebook_Mobile_Api [:db_mysql.BaseSQL.main()].executor": "Run",
+    "Gradle.Phonebook_Mobile_Api [:helper.PropertiesXML.main()].executor": "Run",
     "Gradle.Phonebook_Mobile_Api [dependencies].executor": "Run",
     "Gradle.RegistrationTests.executor": "Run",
     "Gradle.RegistrationTests.registrationNegativeTest_createUserApi.executor": "Run",
@@ -124,6 +114,10 @@
     "Gradle.RegistrationTests.registrationNegativeTest_wrongEmail.executor": "Run",
     "Gradle.RegistrationTests.registrationNegativeTest_wrongPassword.executor": "Run",
     "Gradle.RegistrationTests.registrationPositiveTest.executor": "Run",
+    "Gradle.SerializableTest.executor": "Run",
+    "Gradle.SerializableTest.serialTest.executor": "Run",
+    "Gradle.SerializableTest.serialTest2.executor": "Run",
+    "Gradle.SerializableTest.serialTest3.executor": "Run",
     "Gradle.SplashTests.validateSplashScreenTimeTest.executor": "Run",
     "Gradle.SplashTests.validateVersionTest.executor": "Run",
     "Gradle.UpdateContactsTests.executor": "Run",
@@ -144,13 +138,13 @@
       <recent name="C:\Data\Tel-Ran\QA-44\Phonebook_Mobile_Api\src\main\resources\dp_data" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTests.loginPositiveTest">
-    <configuration name="BaseSQL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="db_mysql.BaseSQL" />
+  <component name="RunManager" selected="Application.PropertiesXML">
+    <configuration name="PropertiesXML" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="helper.PropertiesXML" />
       <module name="Phonebook_Mobile_Api.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="db_mysql.*" />
+          <option name="PATTERN" value="helper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,7 +152,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DatePickerTests.datePickerPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SerializableTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -171,7 +165,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.DatePickerTests.datePickerPositiveTest&quot;" />
+            <option value="&quot;serializable_tests.SerializableTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -182,7 +176,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="DatePickerTests.datePickerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SerializableTest.serialTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -195,7 +189,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.DatePickerTests.datePickerTest&quot;" />
+            <option value="&quot;serializable_tests.SerializableTest.serialTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -206,7 +200,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LoginTests.loginPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SerializableTest.serialTest2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -219,7 +213,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.LoginTests.loginPositiveTest&quot;" />
+            <option value="&quot;serializable_tests.SerializableTest.serialTest2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -230,7 +224,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="LogoutTests.logout" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SerializableTest.serialTest3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -243,7 +237,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;mobile_tests.LogoutTests.logout&quot;" />
+            <option value="&quot;serializable_tests.SerializableTest.serialTest3&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -256,11 +250,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LoginTests.loginPositiveTest" />
-        <item itemvalue="Gradle.DatePickerTests.datePickerPositiveTest" />
-        <item itemvalue="Gradle.DatePickerTests.datePickerTest" />
-        <item itemvalue="Application.BaseSQL" />
-        <item itemvalue="Gradle.LogoutTests.logout" />
+        <item itemvalue="Application.PropertiesXML" />
+        <item itemvalue="Gradle.SerializableTest" />
+        <item itemvalue="Gradle.SerializableTest.serialTest3" />
+        <item itemvalue="Gradle.SerializableTest.serialTest2" />
+        <item itemvalue="Gradle.SerializableTest.serialTest" />
       </list>
     </recent_temporary>
   </component>
@@ -329,7 +323,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732458056598</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="xml file added">
+      <option name="closed" value="true" />
+      <created>1732873178085</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732873178085</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -339,7 +341,8 @@
     <MESSAGE value="EditContact negative tests added, RetryAnalyzer added" />
     <MESSAGE value="sql added" />
     <MESSAGE value="date picker positive test added" />
-    <option name="LAST_COMMIT_MESSAGE" value="date picker positive test added" />
+    <MESSAGE value="xml file added" />
+    <option name="LAST_COMMIT_MESSAGE" value="xml file added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
